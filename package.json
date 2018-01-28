@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "truffle-default-builder": "^2.0.0"
+  }
+}

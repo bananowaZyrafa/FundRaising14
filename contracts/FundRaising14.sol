@@ -19,7 +19,7 @@ contract FundRaising14 {
         if(ledger[tx.origin] == 0) {
             ledger[tx.origin] = now;
         }
-        Transfer(this, msg.sender, amount); //cannot watch this event from within this contract
+        Transfer(this, msg.sender, amount);
     }
     
     modifier checkAvailableAmount(uint amount) {
@@ -42,11 +42,7 @@ contract FundRaising14 {
     returns (uint)
     {
         daysCount = daysToSet;
-        return 12;
-    }
-
-    function set14DaysCount() constant public returns (uint) {
-        return 14;
+        return daysToSet;
     }
     
     function withdraw(uint amount) public 
